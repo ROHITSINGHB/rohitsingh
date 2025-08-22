@@ -9,17 +9,17 @@ const Footer = () => {
     },
     {
       icon: Github,
-      href: "https://github.com/rohithitman",
+      href: "https://github.com/ROHITSINGHB",
       label: "GitHub"
     },
     {
       icon: Linkedin,
-      href: "https://linkedin.com/in/rohit-singh",
+      href: "https://www.linkedin.com/in/rohit-singh-27b77b263/",
       label: "LinkedIn"
     },
     {
       icon: Code,
-      href: "https://leetcode.com/rohit-singh",
+      href: "https://leetcode.com/u/Rohitsinghbisht_07/",
       label: "LeetCode"
     },
     {

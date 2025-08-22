@@ -10,7 +10,7 @@ const Projects = () => {
       tech: ["Python", "Tkinter", "Cryptography", "SHA-256", "Fernet"],
       icon: Shield,
       color: "primary",
-      github: "#",
+      github: "https://github.com/ROHITSINGHB/Advanced-security-system.git",
       demo: null,
       features: ["File Encryption/Decryption", "SHA-256 Hashing", "Secure Authentication", "User-friendly GUI"]
     },
@@ -21,7 +21,7 @@ const Projects = () => {
       tech: ["Python", "Flex", "GUI Development", "Language Processing"],
       icon: Code,
       color: "secondary",
-      github: "#",
+      github: "https://github.com/ROHITSINGHB/Python-To-C-Convertor.git",
       demo: null,
       features: ["Code Conversion", "Syntax Analysis", "GUI Interface", "Error Handling"]
     },
@@ -32,8 +32,8 @@ const Projects = () => {
       tech: ["React.js", "JavaScript", "Responsive Design", "Authentication"],
       icon: Dumbbell,
       color: "accent",
-      github: "#",
-      demo: "#",
+      github: "https://github.com/ROHITSINGHB/gymjooiner.git",
+      demo: "https://gymjoining.pages.dev/",
       features: ["Member Management", "Class Scheduling", "Performance Tracking", "Mobile Responsive"]
     }
   ];
@@ -187,7 +187,7 @@ const Projects = () => {
               className="bg-primary hover:bg-primary/80 text-primary-foreground font-semibold px-8 py-4 neon-glow"
               asChild
             >
-              <a href="https://github.com/rohithitman" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/ROHITSINGHB" target="_blank" rel="noopener noreferrer">
                 <Github className="w-5 h-5 mr-2" />
                 View All Projects
               </a>

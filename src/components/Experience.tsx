@@ -1,4 +1,5 @@
-import { Award, Briefcase, Code2, Trophy } from "lucide-react";
+import { Award, Briefcase, Code2, Trophy, ExternalLink } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Experience = () => {
   const experiences = [
@@ -30,19 +31,29 @@ const Experience = () => {
           title: "Google Cloud Computing",
           organization: "Google Cloud",
           description: "Cloud infrastructure, services, and deployment strategies",
-          year: "2023"
+          year: "2023",
+          certificate: "https://drive.google.com/file/d/1NFcE4qldwRkRQ0a0jvsdrD1LrV1GYzU6/view?usp=sharing"
         },
         {
           title: "Machine Learning with Python",
-          organization: "Infosys Springboard",
+          organization: "Infosys Springboard", 
           description: "Comprehensive ML algorithms and Python implementation",
-          year: "2023"
+          year: "2023",
+          certificate: "https://drive.google.com/file/d/1Sz-Cq9-jAP6f709nP7M1YyuQYhEyjwcj/view?usp=sharing"
         },
         {
           title: "Ethical Hacking",
           organization: "Udemy",
-          description: "Cybersecurity fundamentals and penetration testing",
-          year: "2023"
+          description: "Cybersecurity fundamentals and penetration testing", 
+          year: "2023",
+          certificate: "https://drive.google.com/file/d/1TUF-KDszqHTFsbUVjZTGrNvAJDWPB_zR/view?usp=sharing"
+        },
+        {
+          title: "Real Android App Dev in 15 Hours",
+          organization: "KotlinDevX",
+          description: "Complete Android development course with Kotlin",
+          year: "2024",
+          certificate: "https://drive.google.com/file/d/1gx0SvEgS5ggV1HDtqS1L2b5o7zAAYt8b/view?usp=sharing"
         }
       ]
     },
@@ -148,9 +159,22 @@ const Experience = () => {
                               {item.year}
                             </span>
                           </div>
-                          <p className="text-muted-foreground leading-relaxed">
+                          <p className="text-muted-foreground leading-relaxed mb-4">
                             {item.description}
                           </p>
+                          {item.certificate && (
+                            <Button
+                              size="sm"
+                              variant="outline"
+                              className={`${colors.border} hover:${colors.bg} transition-all duration-300`}
+                              asChild
+                            >
+                              <a href={item.certificate} target="_blank" rel="noopener noreferrer">
+                                <ExternalLink className="w-4 h-4 mr-2" />
+                                View Certificate
+                              </a>
+                            </Button>
+                          )}
                         </div>
                       </div>
                     ))}
@@ -165,7 +189,7 @@ const Experience = () => {
         <div className="mt-16 grid md:grid-cols-4 gap-6">
           <div className="glass-card p-6 text-center neon-glow animate-fade-in">
             <Trophy className="w-8 h-8 text-primary mx-auto mb-3" />
-            <div className="text-2xl font-bold text-gradient mb-1">3+</div>
+            <div className="text-2xl font-bold text-gradient mb-1">4+</div>
             <p className="text-sm text-muted-foreground">Certifications</p>
           </div>
           <div className="glass-card p-6 text-center neon-glow animate-fade-in" style={{ animationDelay: '0.1s' }}>

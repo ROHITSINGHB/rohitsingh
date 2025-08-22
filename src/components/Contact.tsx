@@ -2,8 +2,9 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, Linkedin, Github, Code, Send } from "lucide-react";
+import { Mail, Phone, Linkedin, Github, Code, Send, Loader2 } from "lucide-react";
 import { toast } from "@/components/ui/use-toast";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -11,15 +12,39 @@ const Contact = () => {
     email: "",
     message: ""
   });
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically handle form submission
-    toast({
-      title: "Message Sent!",
-      description: "Thanks for reaching out. I'll get back to you soon!",
-    });
-    setFormData({ name: "", email: "", message: "" });
+    setIsLoading(true);
+    
+    try {
+      await emailjs.send(
+        'service_08eh7ef', // Service ID
+        'template_6ro03ak', // Template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          to_name: 'Rohit Singh'
+        },
+        'QJf3c49nHq0CzHNMb' // Public Key
+      );
+      
+      toast({
+        title: "Message Sent Successfully!",
+        description: "Thanks for reaching out. I'll get back to you soon!",
+      });
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      toast({
+        title: "Failed to Send Message",
+        description: "Please try again or contact me directly via email.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -48,21 +73,21 @@ const Contact = () => {
       icon: Linkedin,
       label: "LinkedIn",
       value: "Connect on LinkedIn",
-      href: "https://linkedin.com/in/rohit-singh",
+      href: "https://www.linkedin.com/in/rohit-singh-27b77b263/",
       color: "accent"
     },
     {
       icon: Github,
       label: "GitHub",
       value: "View Code Portfolio",
-      href: "https://github.com/rohithitman",
+      href: "https://github.com/ROHITSINGHB",
       color: "primary"
     },
     {
       icon: Code,
       label: "LeetCode",
       value: "200+ Problems Solved",
-      href: "https://leetcode.com/rohit-singh",
+      href: "https://leetcode.com/u/Rohitsinghbisht_07/",
       color: "secondary"
     }
   ];
@@ -147,10 +172,15 @@ const Contact = () => {
               <Button
                 type="submit"
                 size="lg"
-                className="w-full bg-primary hover:bg-primary/80 text-primary-foreground font-semibold neon-glow transition-all duration-300"
+                disabled={isLoading}
+                className="w-full bg-primary hover:bg-primary/80 text-primary-foreground font-semibold neon-glow transition-all duration-300 disabled:opacity-50"
               >
-                <Send className="w-5 h-5 mr-2" />
-                Send Message
+                {isLoading ? (
+                  <Loader2 className="w-5 h-5 mr-2 animate-spin" />
+                ) : (
+                  <Send className="w-5 h-5 mr-2" />
+                )}
+                {isLoading ? "Sending..." : "Send Message"}
               </Button>
             </form>
           </div>
