@@ -48,10 +48,10 @@ const Hero = () => {
           <a href="mailto:rohithitman9876@gmail.com" className="glass-card p-3 hover:bg-primary/10 transition-all duration-300 neon-glow">
             <Mail className="w-6 h-6" />
           </a>
-          <a href="https://github.com/rohithitman" target="_blank" rel="noopener noreferrer" className="glass-card p-3 hover:bg-primary/10 transition-all duration-300 neon-glow">
+          <a href="https://github.com/ROHITSINGHB" target="_blank" rel="noopener noreferrer" className="glass-card p-3 hover:bg-primary/10 transition-all duration-300 neon-glow">
             <Github className="w-6 h-6" />
           </a>
-          <a href="https://linkedin.com/in/rohit-singh" target="_blank" rel="noopener noreferrer" className="glass-card p-3 hover:bg-primary/10 transition-all duration-300 neon-glow">
+          <a href="https://www.linkedin.com/in/rohit-singh-27b77b263/" target="_blank" rel="noopener noreferrer" className="glass-card p-3 hover:bg-primary/10 transition-all duration-300 neon-glow">
             <Linkedin className="w-6 h-6" />
           </a>
         </div>
