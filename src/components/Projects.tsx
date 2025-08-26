@@ -10,7 +10,7 @@ const Projects = () => {
       tech: ["Python", "Flask", "MongoDB", "Cryptography", "SHA-256", "Fernet", "HTML", "CSS", "JavaScript"],
       icon: Shield,
       color: "primary",
-      github: "https://github.com/ROHITSINGHB/Secure-File-Encryption-App.git",
+      github: "https://github.com/ROHITSINGHB/Secure-File-Encryption-System.git",
       demo: null,
       features: ["File Encryption/Decryption",
     "SHA-256 Authentication & Lockout",
