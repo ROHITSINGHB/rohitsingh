@@ -5,14 +5,18 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Advanced Security System with File Encryption",
-      description: "Secure application featuring SHA-256 hashing and Fernet encryption/decryption capabilities with an intuitive GUI interface.",
-      tech: ["Python", "Tkinter", "Cryptography", "SHA-256", "Fernet"],
+      title: "Secure File Encryption App",
+      description: "Web application providing secure multi-user file encryption and decryption with robust authentication, Fernet encryption, and a responsive interface via Flask and MongoDB.",
+      tech: ["Python", "Flask", "MongoDB", "Cryptography", "SHA-256", "Fernet", "HTML", "CSS", "JavaScript"],
       icon: Shield,
       color: "primary",
-      github: "https://github.com/ROHITSINGHB/Advanced-security-system.git",
+      github: "https://github.com/ROHITSINGHB/Secure-File-Encryption-App.git",
       demo: null,
-      features: ["File Encryption/Decryption", "SHA-256 Hashing", "Secure Authentication", "User-friendly GUI"]
+      features: ["File Encryption/Decryption",
+    "SHA-256 Authentication & Lockout",
+    "MongoDB Database Integration",
+    "Responsive Web UI",
+    "Secure Password Hashing"]
     },
     {
       id: 2,
