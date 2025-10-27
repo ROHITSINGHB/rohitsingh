@@ -14,14 +14,22 @@ const Hero = () => {
 
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
         {/* Profile Image */}
-        <div className="mb-8 flex justify-center">
-          <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-full blur-lg opacity-75 animate-glow"></div>
-            <img
-              src={profileImage}
-              alt="Rohit Singh"
-              className="relative w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-white/20 shadow-2xl"
-            />
+        <div className="mb-12 flex justify-center">
+          <div className="relative group">
+            {/* Outer glow ring */}
+            <div className="absolute -inset-1 bg-gradient-to-r from-primary via-secondary to-accent rounded-full blur-xl opacity-60 group-hover:opacity-100 animate-glow transition-all duration-500"></div>
+            
+            {/* Inner glow ring */}
+            <div className="absolute -inset-0.5 bg-gradient-to-br from-primary/80 to-secondary/80 rounded-full blur-md opacity-75 animate-pulse"></div>
+            
+            {/* Image container with enhanced border */}
+            <div className="relative">
+              <img
+                src={profileImage}
+                alt="Rohit Singh"
+                className="relative w-40 h-40 md:w-52 md:h-52 rounded-full object-cover border-[6px] border-background shadow-2xl group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
           </div>
         </div>
 
