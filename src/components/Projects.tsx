@@ -5,18 +5,18 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Secure File Encryption App",
-      description: "Web application providing secure multi-user file encryption and decryption with robust authentication, Fernet encryption, and a responsive interface via Flask and MongoDB.",
-      tech: ["Python", "Flask", "MongoDB", "Cryptography", "SHA-256", "Fernet", "HTML", "CSS", "JavaScript"],
+      title: "Secure-File-Encryption-System",
+      description: "Developed a multi-user web application using Python, Flask, and SQLite for secure file encryption and decryption, implementing Fernet and SHA-256 password hashing and authentication features.",
+      tech: ["Python", "Flask", "SQLite", "Fernet", "SHA-256", "Gunicorn", "Docker", "Render Cloud"],
       icon: Shield,
       color: "primary",
       github: "https://github.com/ROHITSINGHB/Secure-File-Encryption-System.git",
       demo: null,
-      features: ["File Encryption/Decryption",
-    "SHA-256 Authentication & Lockout",
-    "MongoDB Database Integration",
-    "Responsive Web UI",
-    "Secure Password Hashing"]
+      features: ["Multi-user Encryption/Decryption",
+    "Authentication with Account Lockout",
+    "SQLite Database Integration",
+    "Automated File Management",
+    "Cloud Deployment (Render)"]
     },
     {
       id: 2,
