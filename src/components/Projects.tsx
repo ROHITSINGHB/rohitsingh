@@ -11,7 +11,7 @@ const Projects = () => {
       icon: Shield,
       color: "primary",
       github: "https://github.com/ROHITSINGHB/Secure-File-Encryption-System.git",
-      demo: null,
+      demo: "https://secure-file-encryption-system-333.onrender.com/login",
       features: ["Multi-user Encryption/Decryption",
     "Authentication with Account Lockout",
     "SQLite Database Integration",
