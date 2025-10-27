@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import profileImage from "@/assets/rohitsbisht.jpg";
 
 const Hero = () => {
   return (
@@ -17,7 +18,7 @@ const Hero = () => {
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-full blur-lg opacity-75 animate-glow"></div>
             <img
-              src="https://i.postimg.cc/c171f5Gz/Rohitsingh.jpg"
+              src={profileImage}
               alt="Rohit Singh"
               className="relative w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-white/20 shadow-2xl"
             />
