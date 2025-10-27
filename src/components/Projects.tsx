@@ -21,13 +21,13 @@ const Projects = () => {
     {
       id: 2,
       title: "Python-to-C Converter",
-      description: "Innovative tool that converts Python code to C language with a graphical user interface, streamlining cross-language development.",
-      tech: ["Python", "Flex", "GUI Development", "Language Processing"],
+      description: "The Python-to-C Converter builds on compiler and web development principles by allowing users to input Python code and obtain C equivalents through an automated, backend-driven translation process. It features a Flex-based lexer and Python parser that generate an Abstract Syntax Tree (AST) and subsequently produce C code, all accessible via a Flask REST API and a responsive HTML/CSS/JS user interface.",
+      tech: ["Python", "Flex", "Flask", "Docker", "Render Cloud", "HTML", "CSS", "JavaScript", "AST"],
       icon: Code,
       color: "secondary",
       github: "https://github.com/ROHITSINGHB/Python-To-C-Convertor.git",
-      demo: null,
-      features: ["Code Conversion", "Syntax Analysis", "GUI Interface", "Error Handling"]
+      demo: "https://python-to-c-convertor-app.onrender.com/",
+      features: ["Real-time Code Translation", "Custom Compiler Pipeline", "Flask REST API", "Docker Containerization", "Cloud Deployment"]
     },
     {
       id: 3,
